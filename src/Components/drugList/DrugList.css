@@ -1,0 +1,19 @@
+.spin {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+}
+
+.btn button {
+  background-color: #eb9605;
+  color: #fff;
+  border: 1px solid #eb9605;
+  border-radius: 25px;
+  height: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.offline h2{
+    color: red !important;
+    background-color: red !important;
+}
