@@ -1,14 +1,19 @@
 import React from "react";
-import "./SummaryCart.css"
+import "./SummaryCart.css";
 
 const SummaryCart = (props) => {
-  return (props.trigger) ? (
+  return props.trigger ? (
     <div className="popup">
       <div className="poup-inner">
-        <button onClick={() => props.setTrigger(false)} className="close-btn">close</button>
-      {props.children}</div>
+        <button onClick={() => props.setTrigger(false)} className="close-btn">
+          close
+        </button>
+        {props.children}
+      </div>
     </div>
-  ) : "";
+  ) : (
+    ""
+  );
 };
 
 export default SummaryCart;
