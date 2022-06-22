@@ -1,11 +1,15 @@
-import React, { Fragment, useContext } from "react";
+import React, { Fragment, useState, useContext } from "react";
 import { UserContext, UserDispatchContext } from "../shopping/ShoppingProvider";
 import { Icon } from "@iconify/react";
+import SummaryCart from "../shopping/SummaryCart";
 import bxPlus from "@iconify-icons/bx/bx-plus";
 import "./DrugItem.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const DrugItem = ({ card }) => {
+  const [cartPopUP, setCartPopUp] = useState(false);
+
+ 
   const userDetails = useContext(UserContext);
   const setUserDetails = useContext(UserDispatchContext);
   console.log(userDetails);
@@ -33,11 +37,20 @@ const DrugItem = ({ card }) => {
 
             <div style={{ display: "flex", justifyContent: "end" }}>
               <div className="plus">
-                <Icon className="icon" icon={bxPlus} color="white" />
+                <a onClick={() => setCartPopUp(true)}>
+                  <Icon className="icon" icon={bxPlus} color="white" />
+                </a>
               </div>
             </div>
           </div>
         </div>
+        <SummaryCart trigger={cartPopUP} setTrigger={setCartPopUp}>
+          <h3>Items in Cart</h3>
+          <div>
+            <h3>{card.name}</h3>
+            <h3>&#8358;{card.price}</h3>
+          </div>
+        </SummaryCart>
       </div>
     </Fragment>
   );

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Offline } from "react-detect-offline";
 // import axios from "axios";
 import Spinner from "react-bootstrap/Spinner";
-import FoodItem from "../drugItem/DrugItem";
+import DrugItem from "../drugItem/DrugItem";
 import "./DrugList.css";
 import drug from "../data";
 
@@ -49,11 +49,9 @@ const DrugList = () => {
     <div className="container">
       <div className="row">
         {drugItem.map((item, index) =>
-          index < 6 ? <FoodItem key={item.id} card={item} /> : ""
+          index < 6 ? <DrugItem key={item.id} card={item} /> : ""
         )}
-        <div className="btn pt-4 pb-3">
-          <button>Learn More</button>
-        </div>
+        
       </div>
     </div>
   );
