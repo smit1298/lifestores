@@ -24,19 +24,19 @@ const DrugItem = ({ card }) => {
   const handleDelete = () => {
     setCount(0);
   };
-  
+
   const userDetails = useContext(UserContext);
   const setUserDetails = useContext(UserDispatchContext);
   console.log(userDetails);
   return (
     <Fragment>
-      <div className="col-lg-4 drugs col-md-6 mt-5 ml-5 mr-5">
+      <div className="col-lg-3 drugs col-md-6 mt-5 ml-5 mr-5">
         <div className="card-deck ">
           <div className="card">
             <SummaryCart trigger={cartPopUP} setTrigger={setCartPopUp}>
               <div>
                 <br />
-                <input className="shop-input" type="text" value={count} />{" "}
+                <input className="shop-input" type="text" value={count} />
                 <br /> <br />
                 <button className="shop-btn" onClick={handleIncrement}>
                   Increment
