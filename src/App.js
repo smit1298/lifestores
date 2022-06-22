@@ -5,6 +5,7 @@ import {ShoppingProvider}  from "./Components/shopping/ShoppingProvider";
 
 const App = () => {
   return (
+  
     <Fragment>
       <div className="App">
         <NavHead />

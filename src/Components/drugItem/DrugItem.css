@@ -2,13 +2,15 @@
   border-radius: 0px 25px 0px 25px !important;
   box-shadow: 0px 0px 4px 0px #979494 !important;
   height: 70%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
-
-
 
 .float-left {
   position: absolute;
   float: left;
+  /* z-index: 2 !important; */
 }
 
 .float-right {
@@ -23,20 +25,34 @@
   text-align: left !important;
 }
 
-.card-text {
+.card-text p {
+  display: block;
   text-align: left !important;
-  margin-left: 15px !important;
-  margin-top: 30px !important;
-  display:-webkit-box;
-  -webkit-line-clamp: 3;
+  margin: 30px 15px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  /* overflow: hidden; */
-  padding-bottom: -5rem;
-
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.star {
-  margin-left: 14px !important;
+.shop-input {
+  width: 50%;
+  border-radius: 20px;
+  border: 3px solid #e7be76;
+  padding-left: 1rem;
+}
+
+.shop-btn {
+  position: absolute;
+  z-index: 2;
+  border-radius: 20px;
+  background-color: #e7be76 !important;
+  color: white;
+  border: 2px solid #e7be76;
+  width: 25%;
+  height: 5%;
 }
 
 .plus {
@@ -47,7 +63,6 @@
   width: 80px;
   background-color: #eb9605;
 }
-
 
 .icon {
   position: absolute !important;

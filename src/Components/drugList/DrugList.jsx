@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Offline } from "react-detect-offline";
-// import axios from "axios";
 import Spinner from "react-bootstrap/Spinner";
 import DrugItem from "../drugItem/DrugItem";
 import "./DrugList.css";
@@ -39,7 +38,7 @@ const DrugList = () => {
           <h2 className="offline">
             You're offline right now. Check your connection and reload the
             foodlist page.
-          </h2>{" "}
+          </h2>
         </Offline>
       );
     }
@@ -51,6 +50,10 @@ const DrugList = () => {
         {drugItem.map((item, index) =>
           index < 6 ? <DrugItem key={item.id} card={item} /> : ""
         )}
+        
+      </div>
+
+      <div className="row">
         
       </div>
     </div>
