@@ -1,4 +1,4 @@
-const dish = {
+const drug = {
   data: [
     {
       id: "52928",
@@ -41,7 +41,7 @@ const dish = {
         "https://www.m-medix.com/2677-large_default/dr-meyers-coflin-expectorant-100ml.jpg"
     }
   ]
-  
 };
 
-export default dish;
+const cart = [];
+export { drug, cart };

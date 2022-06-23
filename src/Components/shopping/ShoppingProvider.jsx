@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import data from '../data';
+import { drug, cart } from "../data";
 
 // Create two context:
 // UserContext: to query the context state
@@ -10,15 +10,16 @@ const UserDispatchContext = createContext(undefined);
 // A "provider" is used to encapsulate only the
 // components that needs the state in this context
 function ShoppingProvider({ children }) {
-  const [shoppingData, setShoppingData] = useState(data);
+  const [shoppingData, setShoppingData] = useState(drug);
+  const [cartData, setCartData] = useState(cart);
 
   return (
-    <UserContext.Provider value={shoppingData}>
-      <UserDispatchContext.Provider value={setShoppingData}>
+    <UserContext.Provider value={{ shoppingData, cartData }}>
+      <UserDispatchContext.Provider value={{ setShoppingData, setCartData }}>
         {children}
       </UserDispatchContext.Provider>
     </UserContext.Provider>
   );
 }
 
-export  { ShoppingProvider, UserContext, UserDispatchContext };
+export { ShoppingProvider, UserContext, UserDispatchContext };

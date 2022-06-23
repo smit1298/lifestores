@@ -3,7 +3,7 @@ import { Offline } from "react-detect-offline";
 import Spinner from "react-bootstrap/Spinner";
 import DrugItem from "../drugItem/DrugItem";
 import "./DrugList.css";
-import drug from "../data";
+import {drug} from "../data";
 
 const DrugList = () => {
   const [drugItem, setDrugItem] = useState([]);
